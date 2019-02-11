@@ -86,9 +86,9 @@ var GLOBAL = this, JSLoader = function(config) {
 				if (!versionTxt) {
 					winxhr = getXHR();
 					if (!window.bof_offline_xhr) {
-						winxhr.open('GET', 'version.txt?t=' + new Date().getTime(), false);
+						winxhr.open('GET', 'smartbi/vision/version.txt?t=' + new Date().getTime(), false);
 					} else {
-						winxhr.open('GET', 'version.txt', false);
+						winxhr.open('GET', 'smartbi/vision/version.txt', false);
 					}
 					winxhr.send('');
 				}
