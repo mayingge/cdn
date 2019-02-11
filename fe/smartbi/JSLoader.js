@@ -400,13 +400,3 @@ var GLOBAL = this, JSLoader = function(config) {
 	}
 	return jsloader;
 };
-
-// set docBase
-(function(doc){
-	if (!window.bof_offline_xhr) { //离线的时候不要设docbase
-		var url = (doc.URL.match('[a-zA-Z]+://.+?/vision') || [ '.' ])[0] + '/';
-		var base = doc.createElement('base');
-		base.href = JSLoader.baseHref = url;
-		doc.getElementsByTagName('head')[0].appendChild(base);
-	}
-})(document);
